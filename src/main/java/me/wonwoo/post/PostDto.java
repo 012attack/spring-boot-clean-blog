@@ -1,18 +1,24 @@
 package me.wonwoo.post;
 
 import lombok.Data;
-import org.hibernate.validator.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 
 
 @Data
 public class PostDto {
 
     private Long id;
-    @NotBlank
+    @NotEmpty
     private String title;
-    @NotBlank
+    @NotEmpty
     private String content;
 
     private String code;
+
+    @NotNull
+    private Long categoryId;
+
+    private String categoryName;
 
 }

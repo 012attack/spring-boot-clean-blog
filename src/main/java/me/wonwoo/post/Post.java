@@ -64,4 +64,12 @@ public class Post {
         this.status = status;
     }
 
+    public Post(String title, String content, String code, PostStatus status, Category category) {
+        this.title = title;
+        this.content = content;
+        this.code = code;
+        this.status = status;
+        this.category = category;
+    }
+
 }

@@ -1,11 +1,13 @@
 package me.wonwoo.comment;
 
+import lombok.Data;
 import me.wonwoo.post.Post;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
+@Data
 public class Comment {
 
     @Id
