@@ -1,7 +1,6 @@
 package me.wonwoo.category;
 
 import lombok.RequiredArgsConstructor;
-import me.wonwoo.post.Post;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -27,7 +26,7 @@ public class CategoryService {
     }
 
     public void updateCategory(Category category){
-        Category oldCategory = categoryRepository.findOne(category.getId());
+        Category oldCategory = categoryRepository.getOne(category.getId());
         if(oldCategory != null){
             oldCategory.setName(category.getName());
         }
@@ -45,6 +44,6 @@ public class CategoryService {
     }
 
     public Category findOne(Long id){
-        return categoryRepository.findOne(id);
+        return categoryRepository.getOne(id);
     }
 }

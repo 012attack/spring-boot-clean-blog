@@ -78,6 +78,7 @@ public class PostControllerTest {
 
         this.mvc.perform(post("/posts")
                 .param("title","제목1")
+                .param("categoryId", "1")
                 .param("content","컨텐츠1")
                 .param("code","마크다운1"))
                 .andExpect(status().isFound())
@@ -100,6 +101,7 @@ public class PostControllerTest {
 
         this.mvc.perform(post("/posts/{id}/edit", 1L)
                 .param("title","제목2")
+                .param("categoryId", "1")
                 .param("content","컨텐츠2")
                 .param("code","마크다운2"))
                 .andExpect(status().isFound())

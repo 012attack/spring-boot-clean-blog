@@ -15,6 +15,8 @@ public class SpringBootCleanBlogApplication {
         SpringApplication.run(SpringBootCleanBlogApplication.class, args);
     }
 
+
+
     @GetMapping
     public String hello(){
         return "hello world";
